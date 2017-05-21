@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import 'leaflet';
 
 @Component({
@@ -9,10 +10,24 @@ import 'leaflet';
 
 export class MapaPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private storage: Storage) {
   }
 
   ionViewDidLoad() {
+    // pega do armazenamento nome da instituição atual
+    this.storage.get('instituicao').then(instituicao => {
+
+      // checa se existe mesmo uma instituição setada ou se é null
+      if (instituicao) {
+
+        // chama o método para iniciar o mapa
+        this.initMap(instituicao);
+      }
+    });
+  }
+
+  initMap(instituicao) {
+    instituicao = encodeURI(instituicao.replace(["ó"], ["o"]));
     document.getElementById('map').innerHTML = '<div id="map-container"></div>';
     var map = L.map('map-container', {
       minZoom: 1,
@@ -25,7 +40,7 @@ export class MapaPage {
     // dimensions of the image
     var w = 4220,
       h = 3490,
-      url = 'assets/maps/UFAL-arapiraca.png';
+      url = "http://localhost:8100/api/" + instituicao + "/mapa.svg";
 
     // calculate the edges of the image, in coordinate space
     var southWest = map.unproject([0, h], map.getMaxZoom() - 1);

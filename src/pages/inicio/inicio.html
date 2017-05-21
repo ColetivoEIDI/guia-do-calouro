@@ -8,6 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-    <h3>Início</h3>
-    <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-item>
+        <ion-label>Instituição</ion-label>
+        <ion-select [(ngModel)]="instituicao" (ngModelChange)="onItemChange($event)" placeholder="{{instituicao}}">
+            <ion-option *ngFor="let instituicao of instituicoes | keys">{{instituicao.value}}</ion-option>
+        </ion-select>
+    </ion-item>
 </ion-content>

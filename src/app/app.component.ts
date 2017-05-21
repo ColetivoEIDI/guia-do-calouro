@@ -3,10 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { InicioPage } from "../pages/inicio/inicio";
-import { HorariosPage } from "../pages/horarios/horarios";
-import { MapaPage } from "../pages/mapa/mapa";
-import { ConfigsPage } from "../pages/configs/configs";
+import { DadosProvider } from '../providers/dados/dados';
+
+import { InicioPage } from '../pages/inicio/inicio';
+import { HorariosPage } from '../pages/horarios/horarios';
+import { MapaPage } from '../pages/mapa/mapa';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,24 +16,27 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = InicioPage;
+  pages: Array<{ title: string, component: any }>;
 
-  pages: Array<{title: string, component: any}>;
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public dadosProvider: DadosProvider) {
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Início', component: InicioPage },
       { title: 'Horários', component: HorariosPage },
-      { title: 'Mapa do campus', component: MapaPage },
-      { title: 'Configurações', component: ConfigsPage }
+      { title: 'Mapa', component: MapaPage }
     ];
 
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
+
+      this.dadosProvider.updateLista();
+      this.dadosProvider.updateData();
+
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
