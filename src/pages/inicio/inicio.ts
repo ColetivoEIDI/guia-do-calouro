@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { DadosProvider} from '../../providers/dados/dados';
+import { Events } from 'ionic-angular';
+import { DadosProvider } from '../../providers/dados/dados';
+
+import { HorariosPage } from '../horarios/horarios';
+import { MapaPage } from '../mapa/mapa';
 
 @Component({
   selector: 'page-inicio',
@@ -10,30 +13,54 @@ import { DadosProvider} from '../../providers/dados/dados';
 
 export class InicioPage {
 
+  // páginas
+  //telefonesPage = TelefonesPage;
+  horariosPage = HorariosPage;
+  mapaPage = MapaPage;
+
   // irá armazenar a lista de instituições disponíveis
-  instituicoes: object;
+  lista: object;
 
   // irá armazenar a instituição atual ou null
   instituicao: string;
 
-  constructor(public navCtrl: NavController, private storage: Storage, public dadosProvider: DadosProvider) {
+  // irá armazenar os dados da instituição atual ou null
+  dados = [];
+
+  constructor(private storage: Storage, public events: Events, public dadosProvider: DadosProvider) {
 
     // recupera instituicao atual do armazenamento do app
-    this.storage.get('instituicao').then(data => this.instituicao = data);
+    this.storage.get('instituicao').then(instituicao => this.instituicao = instituicao);
 
     // recupera lista do armazenamento do app
-    storage.get('lista').then(data => this.instituicoes = data);
+    this.storage.get('lista').then(instituicoes => this.lista = instituicoes);
+
+    // checa mudanças nos dados armazenados da instituição
+    this.updatePropriedades();
+    this.events.subscribe('dados:updated', () => {
+      this.updatePropriedades();
+    });
 
   }
 
-  onItemChange(newValue){
+  updateInstituicao() {
 
     // atualiza o dado no armazenamento do app
-    this.storage.set('instituicao', this.instituicao);
+    this.storage.set('instituicao', this.instituicao).then(() => {
 
-    // pede para o provider atualizar os dados de acordo a nova instituição
-    this.dadosProvider.updateLista();
-    this.dadosProvider.updateData();
+      // pede para o provider atualizar os dados de acordo a nova instituição
+      this.dadosProvider.updateDados();
+    });
+  }
+
+  updatePropriedades() {
+
+    this.dados["descricao"] = "";
+    this.storage.get('dados').then(dados => {
+      if (dados) {
+        this.dados = dados
+      }
+    });
   }
 
 }

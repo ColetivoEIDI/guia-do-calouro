@@ -35,7 +35,7 @@ export class MyApp {
     this.platform.ready().then(() => {
 
       this.dadosProvider.updateLista();
-      this.dadosProvider.updateData();
+      this.dadosProvider.updateDados();
 
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

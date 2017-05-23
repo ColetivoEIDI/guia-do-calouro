@@ -1,17 +1,37 @@
 <ion-header>
     <ion-navbar>
-        <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-        <ion-title>Início</ion-title>
+        <ion-title>Guia do Calouro</ion-title>
     </ion-navbar>
 </ion-header>
-
-<ion-content padding>
+<ion-content>
     <ion-item>
         <ion-label>Instituição</ion-label>
-        <ion-select [(ngModel)]="instituicao" (ngModelChange)="onItemChange($event)" placeholder="{{instituicao}}">
-            <ion-option *ngFor="let instituicao of instituicoes | keys">{{instituicao.value}}</ion-option>
+        <ion-select [(ngModel)]="instituicao" (ngModelChange)="updateInstituicao()" placeholder="{{instituicao}}">
+            <ion-option *ngFor="let instituicao of lista | keys">{{instituicao.value}}</ion-option>
         </ion-select>
     </ion-item>
+    <ion-card *ngIf="dados.nome">
+        <ion-card-header>
+            {{dados.nome}}
+        </ion-card-header>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-12>{{dados.unidade}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>{{dados.endereco}}</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon name="call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon name="time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon name="map" item-left></ion-icon>&nbsp;&nbsp;Mapa da instituição</button></ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
