@@ -17,7 +17,7 @@ export class DadosProvider {
   api: string = 'http://192.168.1.250:8100/api/';
 
   constructor(public http: Http, public storage: Storage, public events: Events) {
-
+    // TODO: checar se existe conexão e prevenir erros pela falta dela.
   }
 
   getLista() {

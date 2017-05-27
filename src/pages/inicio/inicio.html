@@ -1,6 +1,7 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Guia do Calouro</ion-title>
+        <ion-title>
+            <ion-icon name="school" item-left></ion-icon>&nbsp;&nbsp;Guia do Calouro</ion-title>
     </ion-navbar>
 </ion-header>
 <ion-content>
@@ -10,7 +11,7 @@
             <ion-option *ngFor="let instituicao of lista | keys">{{instituicao.value}}</ion-option>
         </ion-select>
     </ion-item>
-    <ion-card *ngIf="dados.nome">
+    <ion-card *ngIf="dados">
         <ion-card-header>
             {{dados.nome}}
         </ion-card-header>
@@ -22,13 +23,13 @@
                 <ion-row>
                     <ion-col col-12>{{dados.endereco}}</ion-col>
                 </ion-row>
-                <ion-row>
+                <ion-row *ngIf="dados.telefones">
                     <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon name="call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
                 </ion-row>
-                <ion-row>
+                <ion-row *ngIf="dados.horarios">
                     <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon name="time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
                 </ion-row>
-                <ion-row>
+                <ion-row *ngIf="dados.mapa">
                     <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon name="map" item-left></ion-icon>&nbsp;&nbsp;Mapa da instituição</button></ion-col>
                 </ion-row>
             </ion-grid>

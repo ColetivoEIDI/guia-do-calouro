@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import 'leaflet';
 
+import { DadosProvider } from '../../providers/dados/dados';
+
 @Component({
   selector: 'page-mapa',
   templateUrl: 'mapa.html'
@@ -9,7 +11,7 @@ import 'leaflet';
 
 export class MapaPage {
 
-  constructor(private storage: Storage) {
+  constructor(private storage: Storage, public dadosProvider: DadosProvider) {
   }
 
   ionViewDidLoad() {
@@ -26,7 +28,6 @@ export class MapaPage {
   }
 
   initMap(instituicao) {
-    instituicao = encodeURI(instituicao.replace(["ó"], ["o"]));
     document.getElementById('map').innerHTML = '<div id="map-container"></div>';
     var map = L.map('map-container', {
       minZoom: 1,
@@ -39,7 +40,7 @@ export class MapaPage {
     // dimensions of the image
     var w = 4220,
       h = 3490,
-      url = "http://192.168.1.250:8100/api/" + instituicao + "/mapa.svg";
+      url = "http://192.168.1.250:8100/api/" + this.dadosProvider.url(instituicao) + "/mapa.svg";
 
     // calculate the edges of the image, in coordinate space
     var southWest = map.unproject([0, h], map.getMaxZoom() - 1);

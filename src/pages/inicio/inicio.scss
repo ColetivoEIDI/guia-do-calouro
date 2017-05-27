@@ -1,10 +1,15 @@
 page-inicio {
     .item {
         padding-left: 0;
+        background: #f0f0f0;
         &.item-block {
             .item-inner {
                 padding-left: 16px;
             }
+        }
+        .label,
+        .select-text {
+            color: #444;
         }
     }
     .button-inner {
@@ -13,12 +18,15 @@ page-inicio {
     .button-block {
         margin: 0;
     }
-    /*
-    .toolbar-background {
-        background-image: url(https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/627201/580/386/m1/fpnw/wm0/1-.jpg?1440748334&s=79c63ce8b11e5d46ce8d6b953feb2fa4);
-        background-size: cover;
-        opacity: 0.4;
-        filter: grayscale(100%);
+    .toolbar {
+        min-height: 60px;
     }
-    */
+    .toolbar-background {
+        background-image: url(../assets/images/background_01.png);
+        background-size: 350px;
+    }
+    .toolbar-title {
+        color: #fff;
+        text-shadow: 0px 0px 5px #000, 0px 0px 1px #000;
+    }
 }

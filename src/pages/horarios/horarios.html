@@ -5,16 +5,22 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-    <ion-icon [name]="item.icon" item-left></ion-icon>
-    {{item.title}}
-    <div class="item-note" item-right>
-    {{item.note}}
-    </div>
-  </button>
+    <ion-list *ngIf="!selecionado">
+        <button ion-item *ngFor="let item of dados.horarios | keys" (click)="itemSelecionado($event, item.value)">
+            {{item.key}}
+            <div class="item-note" item-right>ver</div>
+        </button>
     </ion-list>
-    <div *ngIf="selectedItem" padding>
-        <b>{{selectedItem.title}}</b>
+    <div *ngIf="selecionado">
+        <ion-card *ngFor="let dia of selecionado | keys">
+            <ion-card-header>
+                {{dia.key}}
+            </ion-card-header>
+            <ion-card-content>
+                <p *ngFor="let horario of dia.value">
+                    {{horario}}
+                </p>
+            </ion-card-content>
+        </ion-card>
     </div>
 </ion-content>
