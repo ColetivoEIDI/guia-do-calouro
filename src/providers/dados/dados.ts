@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
 export class DadosProvider {
 
   // temporário para testes
-  api: string = 'http://192.168.1.250:8100/api/';
+  api: string = 'http://localhost:8100/api/';
 
   constructor(public http: Http, public storage: Storage, public events: Events) {
     // TODO: checar se existe conexão e prevenir erros pela falta dela.
@@ -36,7 +36,12 @@ export class DadosProvider {
       data => {
 
         // salva a lista recebida no armazenamnto
-        this.storage.set('lista', data);
+        this.storage.set('lista', data).then(() => {
+
+          // emite o evento de que os dados foram atualziados
+          this.events.publish('lista:updated');
+
+        });
       },
       err => console.log(err)
     );

@@ -5,13 +5,18 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-item>
+    <ion-item *ngIf="lista">
         <ion-label>Instituição</ion-label>
         <ion-select [(ngModel)]="instituicao" (ngModelChange)="updateInstituicao()" placeholder="{{instituicao}}">
             <ion-option *ngFor="let instituicao of lista | keys">{{instituicao.value}}</ion-option>
         </ion-select>
     </ion-item>
-    <ion-card *ngIf="dados">
+    <ion-card *ngIf="atualizando || !lista">
+        <ion-card-header>
+            Carregando...
+        </ion-card-header>
+    </ion-card>
+    <ion-card *ngIf="dados.nome && !atualizando">
         <ion-card-header>
             {{dados.nome}}
         </ion-card-header>
@@ -30,7 +35,10 @@
                     <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon name="time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
                 </ion-row>
                 <ion-row *ngIf="dados.mapa">
-                    <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon name="map" item-left></ion-icon>&nbsp;&nbsp;Mapa da instituição</button></ion-col>
+                    <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon name="map" item-left></ion-icon>&nbsp;&nbsp;Mapa</button></ion-col>
+                </ion-row>
+                <ion-row *ngIf="dados.mais">
+                    <ion-col col-12><button [navPush]="maisPage" ion-button block color="light"><ion-icon name="arrow-dropright-circle" item-left></ion-icon>&nbsp;&nbsp;Mais...</button></ion-col>
                 </ion-row>
             </ion-grid>
         </ion-card-content>

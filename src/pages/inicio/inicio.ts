@@ -18,8 +18,10 @@ export class InicioPage {
   horariosPage = HorariosPage;
   mapaPage = MapaPage;
 
+  atualizando: boolean = true;
+
   // irá armazenar a lista de instituições disponíveis
-  lista: object;
+  lista: any;
 
   // irá armazenar a instituição atual ou null
   instituicao: string;
@@ -32,18 +34,25 @@ export class InicioPage {
     // recupera instituicao atual do armazenamento do app
     this.storage.get('instituicao').then(instituicao => this.instituicao = instituicao);
 
-    // recupera lista do armazenamento do app
-    this.storage.get('lista').then(instituicoes => this.lista = instituicoes);
+    // checa mudanças na lista de instituições
+    this.updateLista();
+    this.dadosProvider.updateLista();
+    this.events.subscribe('lista:updated', () => {
+      this.updateLista();
+    });
 
     // checa mudanças nos dados armazenados da instituição
-    this.updatePropriedades();
+    this.updateDados();
+    this.dadosProvider.updateDados();
     this.events.subscribe('dados:updated', () => {
-      this.updatePropriedades();
+      this.updateDados();
     });
 
   }
 
   updateInstituicao() {
+
+    this.atualizando = true;
 
     // atualiza o dado no armazenamento do app
     this.storage.set('instituicao', this.instituicao).then(() => {
@@ -53,13 +62,25 @@ export class InicioPage {
     });
   }
 
-  updatePropriedades() {
+  updateLista() {
+    this.atualizando = true;
+    this.storage.get('lista').then(lista => {
+      if (lista) {
+        this.lista = lista;
+        //setTimeout(() => {this.lista = lista})
+      }
+      this.atualizando = false;
+    });
+  }
 
-    this.dados["descricao"] = "";
+  updateDados() {
+    this.atualizando = true;
     this.storage.get('dados').then(dados => {
       if (dados) {
         this.dados = dados
+        //setTimeout(() => {this.dados = dados})
       }
+      this.atualizando = false;
     });
   }
 

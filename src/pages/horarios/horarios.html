@@ -11,6 +11,7 @@
             <div class="item-note" item-right>ver</div>
         </button>
     </ion-list>
+    <!-- TODO: melhorar essa exibição dos horários -->
     <div *ngIf="selecionado">
         <ion-card *ngFor="let dia of selecionado | keys">
             <ion-card-header>
@@ -18,7 +19,7 @@
             </ion-card-header>
             <ion-card-content>
                 <p *ngFor="let horario of dia.value">
-                    {{horario}}
+                    <ion-icon name="time"></ion-icon>&nbsp;&nbsp;{{horario}}
                 </p>
             </ion-card-content>
         </ion-card>
