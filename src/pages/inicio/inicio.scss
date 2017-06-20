@@ -18,14 +18,14 @@ page-inicio {
     .button-block {
         margin: 0;
     }
-    .toolbar {
-        min-height: 60px;
-    }
     .toolbar-background {
         background-image: url(../assets/images/background_01.png);
         background-size: 350px;
     }
     .toolbar-title {
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 600;
         color: #fff;
         text-shadow: 0px 0px 5px #000, 0px 0px 1px #000;
     }
