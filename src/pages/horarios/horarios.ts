@@ -28,4 +28,14 @@ export class HorariosPage {
       item: item
     });
   }
+
+  toggleDetalhes(data) {
+    if (data.detalhes) {
+        data.detalhes = false;
+        data.icon = 'ios-arrow-down';
+    } else {
+        data.detalhes = true;
+        data.icon = 'ios-arrow-up';
+    }
+  }
 }

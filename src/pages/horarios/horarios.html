@@ -11,17 +11,20 @@
             <div class="item-note" item-right>ver</div>
         </button>
     </ion-list>
-    <!-- TODO: melhorar essa exibição dos horários -->
     <div *ngIf="selecionado">
-        <ion-card *ngFor="let dia of selecionado | keys">
-            <ion-card-header>
-                {{dia.key}}
-            </ion-card-header>
-            <ion-card-content>
-                <p *ngFor="let horario of dia.value">
-                    <ion-icon name="time"></ion-icon>&nbsp;&nbsp;{{horario}}
-                </p>
-            </ion-card-content>
-        </ion-card>
+        <ion-list>
+            <div *ngFor="let dia of selecionado | keys">
+                <ion-item class="item-stable" (click)="toggleDetalhes(dia)">
+                    <ion-icon *ngIf="!dia.icon" color="primary" name="ios-arrow-down"></ion-icon>
+                    <ion-icon *ngIf="dia.icon" color="primary" [name]="dia.icon"></ion-icon>
+                    &nbsp;&nbsp;{{dia.key}}
+                </ion-item>
+                <div *ngIf="dia.detalhes">
+                    <ion-item class="item-accordion" *ngFor="let horario of dia.value">
+                        <ion-icon name="ios-time-outline"></ion-icon>&nbsp;&nbsp;{{horario}}
+                    </ion-item>
+                </div>
+            </div>
+        </ion-list>
     </div>
 </ion-content>

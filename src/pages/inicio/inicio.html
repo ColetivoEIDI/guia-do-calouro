@@ -29,16 +29,16 @@
                     <ion-col col-12>{{dados.endereco}}</ion-col>
                 </ion-row>
                 <ion-row *ngIf="dados.telefones">
-                    <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon name="ios-call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
+                    <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
                 </ion-row>
                 <ion-row *ngIf="dados.horarios">
-                    <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon name="ios-time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
+                    <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
                 </ion-row>
                 <ion-row *ngIf="dados.mapa">
-                    <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon name="ios-map" item-left></ion-icon>&nbsp;&nbsp;Mapa</button></ion-col>
+                    <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-map" item-left></ion-icon>&nbsp;&nbsp;Mapa</button></ion-col>
                 </ion-row>
-                <ion-row *ngIf="dados.mais">
-                    <ion-col col-12><button [navPush]="maisPage" ion-button block color="light"><ion-icon name="ios-arrow-dropright-circle" item-left></ion-icon>&nbsp;&nbsp;Mais...</button></ion-col>
+                <ion-row *ngIf="dados.arquivos">
+                    <ion-col col-12><button [navPush]="maisPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-document" item-left></ion-icon>&nbsp;&nbsp;Arquivos</button></ion-col>
                 </ion-row>
             </ion-grid>
         </ion-card-content>
