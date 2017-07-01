@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Telefones</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="!selecionado">
+        <button ion-item *ngFor="let item of dados.telefones | keys" (click)="itemSelecionado($event, item.value)">
+            {{item.key}}
+            <div class="item-note" item-right>ver</div>
+        </button>
+    </ion-list>
+    <div *ngIf="selecionado">
+        <ion-list>
+            <div *ngFor="let setor of selecionado | keys">
+                <ion-item class="item-stable" (click)="toggleDetalhes(setor)">
+                    <ion-icon *ngIf="!setor.icon" color="primary" name="ios-arrow-down"></ion-icon>
+                    <ion-icon *ngIf="setor.icon" color="primary" [name]="setor.icon"></ion-icon>
+                    &nbsp;&nbsp;{{setor.key}}
+                </ion-item>
+                <div *ngIf="setor.detalhes">
+                    <ion-item class="item-accordion" *ngFor="let numero of setor.value">
+                        <ion-icon name="ios-call-outline"></ion-icon>&nbsp;&nbsp;{{numero}}
+                    </ion-item>
+                </div>
+            </div>
+        </ion-list>
+    </div>
+</ion-content>

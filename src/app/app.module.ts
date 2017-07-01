@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { InicioPage } from '../pages/inicio/inicio';
+import { TelefonesPage } from '../pages/telefones/telefones';
 import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from "../pages/mapa/mapa";
 
@@ -19,6 +20,7 @@ import { KeysPipe } from '../pipes/keys/keys';
   declarations: [
     MyApp,
     InicioPage,
+    TelefonesPage,
     HorariosPage,
     MapaPage,
     KeysPipe
@@ -33,6 +35,7 @@ import { KeysPipe } from '../pipes/keys/keys';
   entryComponents: [
     MyApp,
     InicioPage,
+    TelefonesPage,
     HorariosPage,
     MapaPage,
   ],

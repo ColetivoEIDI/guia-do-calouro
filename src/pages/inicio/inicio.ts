@@ -3,6 +3,7 @@ import { Storage } from '@ionic/storage';
 import { Events } from 'ionic-angular';
 import { DadosProvider } from '../../providers/dados/dados';
 
+import { TelefonesPage } from '../telefones/telefones';
 import { HorariosPage } from '../horarios/horarios';
 import { MapaPage } from '../mapa/mapa';
 
@@ -14,7 +15,7 @@ import { MapaPage } from '../mapa/mapa';
 export class InicioPage {
 
   // páginas
-  //telefonesPage = TelefonesPage;
+  telefonesPage = TelefonesPage;
   horariosPage = HorariosPage;
   mapaPage = MapaPage;
 

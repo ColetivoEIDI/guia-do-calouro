@@ -3,10 +3,10 @@ import { Storage } from '@ionic/storage';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-horarios',
-  templateUrl: 'horarios.html'
+  selector: 'page-telefones',
+  templateUrl: 'telefones.html'
 })
-export class HorariosPage {
+export class TelefonesPage {
   dados: any = [];
   selecionado: any;
 
@@ -22,9 +22,9 @@ export class HorariosPage {
 
   itemSelecionado(event, item) {
 
-    // TODO: pegar também a chave/nome e exibir na tela de números
+    // TODO: pegar também a chave/nome e exibir na tela de horários
 
-    this.navCtrl.push(HorariosPage, {
+    this.navCtrl.push(TelefonesPage, {
       item: item
     });
   }
