@@ -3,5 +3,25 @@
     "unidade": "Campus A.C. Simões",
     "endereco": "Av. Lourival Melo Mota, Tabuleiro dos Martins. CEP:57072-900. Maceió, AL",
     "mapa": false,
-    "horarios": false
+    "telefones": {
+        "Outros": {
+            "BC - Biblioteca Central": ["(82) 3214-1461"],
+            "COPEVE - Comissão Permanente do Vestibular": ["(82) 3214-1694", "(82) 3214-1692"],
+            "DRCA - Departamento de Registro e Controle Acadêmico": ["(82) 3214-1087"],
+            "HU - Hospital Universitário": ["(82) 3202-3800", "(82) 3202-3712"]
+        }
+    },
+    "horarios": {
+        "Biblioteca": {
+            "Segunda-feira": ["07:00 as 21:40"],
+            "Terça-feira": ["07:00 as 21:40"],
+            "Quarta-feira": ["07:00 as 21:40"],
+            "Quinta-feira": ["07:00 as 21:40"],
+            "Sexta-feira": ["07:00 as 21:40"],
+            "Sábado": ["08:00 as 14:00"]
+        }
+    },
+    "arquivos": {
+        "Calendário Acadêmico 2017": "calendario-academico-ufal-2017.pdf"
+    }
 }

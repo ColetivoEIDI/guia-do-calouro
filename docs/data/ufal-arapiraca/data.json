@@ -5,37 +5,25 @@
     "mapa": true,
     "telefones": {
         "Administrativos": {
-            "Coordenadoria de Graduação (COGRAD)": ["(82) 3482-1844"],
-            "Coordenadoria de Infra-estrutura (COINFRA)": ["(82) 3482-1854"]
+            "COGRAD - Coordenadoria de Graduação": ["(82) 3482-1844"],
+            "COINFRA - Coordenadoria de Infra-estrutura": ["(82) 3482-1854"]
         },
         "Apoio": {
-            "Núcleo de Apoio Estudantil (NAE)": ["(82) 3482-1834"]
+            "NAE - Núcleo de Apoio Estudantil": ["(82) 3482-1834"]
         }
     },
     "horarios": {
         "Biblioteca": {
-            "Segunda-feira": [
-                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
-            ],
-            "Terça-feira": [
-                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
-            ],
-            "Quarta-feira": [
-                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
-            ],
-            "Quinta-feira": [
-                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
-            ],
-            "Sexta-feira": [
-                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
-            ],
-            "Sábado": [
-                "08:00 as 13:00"
-            ]
+            "Segunda-feira": ["07:00 as 21:40"],
+            "Terça-feira": ["07:00 as 21:40"],
+            "Quarta-feira": ["07:00 as 21:40"],
+            "Quinta-feira": ["07:00 as 21:40"],
+            "Sexta-feira": ["07:00 as 21:40"],
+            "Sábado": ["08:00 as 14:00"]
         }
     },
     "arquivos": {
-        "Calendario Academico 2017": "calendario-academico-ufal-2017.pdf",
-        "Recepcao - Manual de Sobrevivencia 2017": "recepcao-manual-de-sobrevivencia.pdf"
+        "Calendário Acadêmico 2017": "calendario-academico-ufal-2017.pdf",
+        "Manual de Sobrevivência 2017": "recepcao-manual-de-sobrevivencia.pdf"
     }
 }
