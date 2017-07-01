@@ -1,0 +1,17 @@
+{
+    "nome": "Universidade Estadual de Alagoas",
+    "unidade": "Campus Arapiraca",
+    "endereco": "Rua Governador Luiz Cavalcante, Alto Cruzeiro. CEP:57312-270. Arapiraca, AL",
+    "mapa": false,
+    "horarios": {
+        "biblioteca": {
+            "Segunda": "",
+            "Terça": "",
+            "Quarta": "",
+            "Quinta": "",
+            "Sexta": "",
+            "Sábado": "",
+            "Domingo": ""
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "nome": "Universidade Federal de Alagoas",
+    "unidade": "Campus Arapiraca",
+    "endereco": "Av. Manoel Severino Barbosa, Bom Sucesso. CEP:57309-005. Arapiraca, AL",
+    "mapa": true,
+    "telefones": {
+        "Administrativos": {
+            "Coordenadoria de Graduação (COGRAD)": ["(82) 3482-1844"],
+            "Coordenadoria de Infra-estrutura (COINFRA)": ["(82) 3482-1854"]
+        },
+        "Apoio": {
+            "Núcleo de Apoio Estudantil (NAE)": ["(82) 3482-1834"]
+        }
+    },
+    "horarios": {
+        "Biblioteca": {
+            "Segunda-feira": [
+                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
+            ],
+            "Terça-feira": [
+                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
+            ],
+            "Quarta-feira": [
+                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
+            ],
+            "Quinta-feira": [
+                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
+            ],
+            "Sexta-feira": [
+                "08:00 as 12:00", "13:00 as 18:00", "17:00 as 21:00"
+            ],
+            "Sábado": [
+                "08:00 as 13:00"
+            ]
+        }
+    },
+    "arquivos": {
+        "Calendario Academico 2017": "calendario-academico-ufal-2017.pdf",
+        "Recepcao - Manual de Sobrevivencia 2017": "recepcao-manual-de-sobrevivencia.pdf"
+    }
+}
