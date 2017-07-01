@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Arquivos</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <div *ngFor="let arquivo of dados.arquivos | keys">
+            <ion-item (click)="url(arquivo.value)">
+                <ion-icon color="primary" name="ios-link"></ion-icon>
+                &nbsp;&nbsp;{{arquivo.key}}
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>

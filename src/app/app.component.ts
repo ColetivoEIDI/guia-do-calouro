@@ -9,6 +9,7 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { TelefonesPage } from '../pages/telefones/telefones';
 import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from '../pages/mapa/mapa';
+import { ArquivosPage } from '../pages/arquivos/arquivos';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'Início', component: InicioPage },
       { title: 'Telefones', component: TelefonesPage },
       { title: 'Horários', component: HorariosPage },
-      { title: 'Mapa', component: MapaPage }
+      { title: 'Mapa', component: MapaPage },
+      { title: 'Arquivos', component: ArquivosPage }
     ];
 
   }

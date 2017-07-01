@@ -17,15 +17,13 @@
     .title-ios {
         padding: 0 60px 1px;
     }
-}
-
-.toolbar-title {
-    font-weight: normal;
-    font-size: 1.7rem;
-}
-
-.back-button-text {
-    display: none;
+    .toolbar-title {
+        font-weight: normal;
+        font-size: 1.7rem;
+    }
+    .back-button-text {
+        display: none;
+    }
 }
 
 .back-button-ios {
@@ -44,39 +42,25 @@
     padding: 0 1em;
     height: 2.8em;
     font-size: 1.6rem;
-}
-
-.button-inner {
-    font-weight: normal;
-    font-size: 1.6rem;
-    text-transform: none;
-}
-
-.list>.item-block:last-child,
-.list>.item-wrapper:last-child .item-block {
-    border-bottom: 0.55px solid #c8c7cc;
-}
-
-.list>.item-block:first-child {
-    border-top: 0.55px solid #c8c7cc;
-}
-
-.item-stable {
-    border-color: #b2b2b2;
-    background-color: #f8f8f8;
-    color: #444;
-    padding-left: 0px;
-    &:active {
-        background-color: #e8e8e8;
-    }
-    .label {
-        margin-left: 20px;
+    .button-inner {
+        font-weight: normal;
+        font-size: 1.6rem;
+        text-transform: none;
     }
 }
 
-.item-accordion {
+.item {
     padding-left: 0px;
     .label {
         margin-left: 20px;
+        font-size: 90%;
+    }
+    &.item-stable {
+        border-color: #b2b2b2;
+        background-color: #f8f8f8;
+        color: #444;
+        &:active {
+            background-color: #e8e8e8;
+        }
     }
 }

@@ -1,9 +1,5 @@
 {
     "name": "app",
     "app_id": "",
-    "type": "ionic-angular",
-    "proxies": [{
-        "path": "/api",
-        "proxyUrl": "http://localhost:1515/"
-    }]
+    "type": "ionic-angular"
 }

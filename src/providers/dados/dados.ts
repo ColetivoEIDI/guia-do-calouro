@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
 export class DadosProvider {
 
   // temporário para testes
-  api: string = 'http://localhost:8100/api/';
+  api: string = 'https://josefreittas.github.io/guia-do-calouro/data/';
 
   constructor(public http: Http, public storage: Storage, public events: Events) {
     // TODO: checar se existe conexão e prevenir erros pela falta dela.

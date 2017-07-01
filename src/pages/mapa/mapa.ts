@@ -40,7 +40,7 @@ export class MapaPage {
     // dimensions of the image
     var w = 4220,
       h = 3490,
-      url = "http://localhost:8100/api/" + this.dadosProvider.url(instituicao) + "/mapa.svg";
+      url = this.dadosProvider.api + this.dadosProvider.url(instituicao) + "/mapa.svg";
 
     // calculate the edges of the image, in coordinate space
     var southWest = map.unproject([0, h], map.getMaxZoom() - 1);

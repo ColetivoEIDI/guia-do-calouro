@@ -6,6 +6,7 @@ import { DadosProvider } from '../../providers/dados/dados';
 import { TelefonesPage } from '../telefones/telefones';
 import { HorariosPage } from '../horarios/horarios';
 import { MapaPage } from '../mapa/mapa';
+import { ArquivosPage } from '../arquivos/arquivos';
 
 @Component({
   selector: 'page-inicio',
@@ -18,6 +19,7 @@ export class InicioPage {
   telefonesPage = TelefonesPage;
   horariosPage = HorariosPage;
   mapaPage = MapaPage;
+  arquivosPage = ArquivosPage;
 
   atualizando: boolean = true;
 
