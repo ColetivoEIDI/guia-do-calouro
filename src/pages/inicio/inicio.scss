@@ -4,11 +4,18 @@ page-inicio {
         background: #f0f0f0;
         &.item-block {
             .item-inner {
-                padding-left: 16px;
+                padding-right: 0px;
+                .select {
+                    padding-top: 14px;
+                    margin-right: 12px;
+                    .select-text {
+                        color: #444;
+                        font-size: 90%;
+                    }
+                }
             }
         }
-        .label,
-        .select-text {
+        .label {
             color: #444;
         }
     }
