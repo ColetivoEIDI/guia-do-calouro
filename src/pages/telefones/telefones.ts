@@ -22,7 +22,7 @@ export class TelefonesPage {
 
   itemSelecionado(event, item) {
 
-    // TODO: pegar também a chave/nome e exibir na tela de horários
+    // TODO: pegar também a chave/nome e exibir na tela de telefones
 
     this.navCtrl.push(TelefonesPage, {
       item: item
