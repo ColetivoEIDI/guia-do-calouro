@@ -2,6 +2,7 @@
     "nome": "Universidade Federal de Alagoas",
     "unidade": "Campus Arapiraca",
     "endereco": "Av. Manoel Severino Barbosa, Bom Sucesso. CEP:57309-005. Arapiraca, AL",
+    "website": "http://www.ufal.edu.br/arapiraca",
     "mapa": true,
     "telefones": {
         "Administrativo e apoio": {

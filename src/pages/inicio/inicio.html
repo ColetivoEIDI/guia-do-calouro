@@ -28,6 +28,11 @@
                 <ion-row>
                     <ion-col col-12>{{dados.endereco}}</ion-col>
                 </ion-row>
+                <ion-row *ngIf="dados.website">
+                    <ion-col col-12 (click)="url(dados.website)">
+                        <ion-icon color="primary" name="ios-link"></ion-icon>&nbsp;&nbsp;Página Web
+                    </ion-col>
+                </ion-row>
                 <ion-row *ngIf="dados.telefones">
                     <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
                 </ion-row>

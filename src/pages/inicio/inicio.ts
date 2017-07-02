@@ -70,7 +70,6 @@ export class InicioPage {
     this.storage.get('lista').then(lista => {
       if (lista) {
         this.lista = lista;
-        //setTimeout(() => {this.lista = lista})
       }
       this.atualizando = false;
     });
@@ -81,10 +80,14 @@ export class InicioPage {
     this.storage.get('dados').then(dados => {
       if (dados) {
         this.dados = dados
-        //setTimeout(() => {this.dados = dados})
       }
       this.atualizando = false;
     });
+  }
+
+  // atribuir esse método a um local onde ele possa ser usado a partir de qualquer página
+  url(url: string) {
+    window.open(url, "_system", "location=no");
   }
 
 }
