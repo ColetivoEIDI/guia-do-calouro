@@ -4,12 +4,36 @@
     "endereco": "Av. Manoel Severino Barbosa, Bom Sucesso. CEP:57309-005. Arapiraca, AL",
     "mapa": true,
     "telefones": {
-        "Administrativos": {
+        "Administrativo e apoio": {
+            "Biblioteca": ["(82) 3482-1837", "(82) 3482-1835"],
             "COGRAD - Coordenadoria de Graduação": ["(82) 3482-1844"],
-            "COINFRA - Coordenadoria de Infra-estrutura": ["(82) 3482-1854"]
+            "COINFRA - Coordenadoria de Infra-estrutura": ["(82) 3482-1854"],
+            "COPLAN - Coordenadoria de Planejamento": ["(82) 3482-1810"],
+            "CORH - Coordenadoria de Recursos Humanos": ["(82) 3482-1821"],
+            "CRCA - Coordenadoria de Registro e Controle Acadêmico": ["(82) 3482-1833"],
+            "Direção Acadêmica": ["(82) 3482-1832"],
+            "Direção Geral": ["(82) 3482-1822"],
+            "NAE - Núcleo de Apoio Estudantil": ["(82) 3482-1834"],
+            "NTI - Núcleo de Tecnologia da Informação": ["(82) 3482-1818", "(82) 3482-1828", "(82) 3482-1838"],
+            "Servipa": ["(82) 3482-1819"]
         },
-        "Apoio": {
-            "NAE - Núcleo de Apoio Estudantil": ["(82) 3482-1834"]
+        "Cursos": {
+            "Administração": ["(82) 3482-1840"],
+            "Administração Pública": ["(82) 3482-1839"],
+            "Agronomia": ["(82) 3482-1842"],
+            "Arquitetura e Urbanismo": ["(82) 3482-1840"],
+            "Biologia": ["(82) 3482-1842"],
+            "Ciência da Computação": ["(82) 3482-1840"],
+            "Educação Física": ["(82) 3482-1843"],
+            "Enfermagem": ["(82) 3482-1843"],
+            "Física": ["(82) 3482-1841"],
+            "Letras": ["(82) 3482-1839"],
+            "Matemática": ["(82) 3482-1841"],
+            "Medicina": ["(82) 3482-1843"],
+            "Pedagogia": ["(82) 3482-1839"],
+            "Química": ["(82) 3482-1841"],
+            "Tronco Inicial": ["(82) 3482-1844"],
+            "Zootecnia": ["(82) 3482-1842"]
         }
     },
     "horarios": {
