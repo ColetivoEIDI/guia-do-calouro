@@ -11,41 +11,51 @@
             <ion-option *ngFor="let instituicao of lista | keys">{{instituicao.value}}</ion-option>
         </ion-select>
     </ion-item>
+
+    <!-- TODO: melhorar esse if -->
+    <ion-card *ngIf="!(atualizando || !lista) && !(dados.nome && !atualizando)">
+        <ion-card-header>Bem vindo(a) ao Guia do Calouro!</ion-card-header>
+        <ion-card-content>
+            <span>Seu guia de bolso com informações essenciais sobre sua nova instituição de ensino e sua nova vida acadêmica.</span>
+        </ion-card-content>
+    </ion-card>
     <ion-card *ngIf="atualizando || !lista">
         <ion-card-header>
             Carregando...
         </ion-card-header>
     </ion-card>
-    <ion-card *ngIf="dados.nome && !atualizando">
-        <ion-card-header>
-            {{dados.nome}}
-        </ion-card-header>
-        <ion-card-content>
-            <ion-grid>
-                <ion-row>
-                    <ion-col col-12>{{dados.unidade}}</ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col col-12>{{dados.endereco}}</ion-col>
-                </ion-row>
-                <ion-row *ngIf="dados.website">
-                    <ion-col col-12 (click)="url(dados.website)">
-                        <ion-icon color="primary" name="ios-link"></ion-icon>&nbsp;&nbsp;Página Web
-                    </ion-col>
-                </ion-row>
-                <ion-row *ngIf="dados.telefones">
-                    <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
-                </ion-row>
-                <ion-row *ngIf="dados.horarios">
-                    <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
-                </ion-row>
-                <ion-row *ngIf="dados.mapa">
-                    <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-map" item-left></ion-icon>&nbsp;&nbsp;Mapa</button></ion-col>
-                </ion-row>
-                <ion-row *ngIf="dados.arquivos">
-                    <ion-col col-12><button [navPush]="arquivosPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-document" item-left></ion-icon>&nbsp;&nbsp;Arquivos</button></ion-col>
-                </ion-row>
-            </ion-grid>
-        </ion-card-content>
-    </ion-card>
+    <div *ngIf="dados.nome && !atualizando">
+        <ion-card>
+            <ion-card-header>{{dados.nome}}</ion-card-header>
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-12>{{dados.unidade}}</ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12>{{dados.endereco}}</ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="dados.website">
+                        <ion-col col-12 (click)="url(dados.website)">
+                            <ion-icon color="primary" name="ios-link"></ion-icon>&nbsp;&nbsp;Página Web
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="dados.telefones">
+                        <ion-col col-12><button [navPush]="telefonesPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-call" item-left></ion-icon>&nbsp;&nbsp;Telefones</button></ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="dados.horarios">
+                        <ion-col col-12><button [navPush]="horariosPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-time" item-left></ion-icon>&nbsp;&nbsp;Horários</button></ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="dados.mapa">
+                        <ion-col col-12><button [navPush]="mapaPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-map" item-left></ion-icon>&nbsp;&nbsp;Mapa</button></ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="dados.arquivos">
+                        <ion-col col-12><button [navPush]="arquivosPage" ion-button block color="light"><ion-icon class="button-icon" name="ios-document" item-left></ion-icon>&nbsp;&nbsp;Arquivos</button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <ion-label *ngIf="lista" class="rodape" color="primary" (click)="url('mailto:coletivo.eidi@gmail.com')">Algo desatualizado ou incorreto?</ion-label>
+    <ion-label class="rodape" color="coletivo" (click)="url('https://sites.google.com/site/eidicoletivo/home')">Coletivo EIDI</ion-label>
 </ion-content>
