@@ -7,7 +7,10 @@
 <ion-content>
     <ion-list *ngIf="!selecionado">
         <div *ngFor="let item of dados.telefones | keys">
-            <ion-item (click)="itemSelecionado($event, item.value)">{{item.key}}</ion-item>
+            <ion-item (click)="itemSelecionado($event, item.value)">
+                <ion-icon color="primary" name="ios-arrow-forward"></ion-icon>
+                &nbsp;&nbsp;{{item.key}}
+            </ion-item>
         </div>
     </ion-list>
     <div *ngIf="selecionado">
