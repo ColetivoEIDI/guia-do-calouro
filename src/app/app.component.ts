@@ -10,6 +10,7 @@ import { TelefonesPage } from '../pages/telefones/telefones';
 import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from '../pages/mapa/mapa';
 import { ArquivosPage } from '../pages/arquivos/arquivos';
+import { LinksPage } from '../pages/links/links';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +31,8 @@ export class MyApp {
       { title: 'Telefones', component: TelefonesPage },
       { title: 'Horários', component: HorariosPage },
       { title: 'Mapa', component: MapaPage },
-      { title: 'Arquivos', component: ArquivosPage }
+      { title: 'Arquivos', component: ArquivosPage },
+      { title: 'Links', component: LinksPage }
     ];
 
   }

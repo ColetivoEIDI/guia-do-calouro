@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Links Úteis</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <div *ngFor="let link of dados.links | keys">
+            <ion-item (click)="url(link.value)">
+                <ion-icon color="primary" name="ios-link"></ion-icon>
+                &nbsp;&nbsp;{{link.key}}
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>

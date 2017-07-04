@@ -4,6 +4,14 @@
     "endereco": "Av. Manoel Severino Barbosa, Bom Sucesso. CEP:57309-005. Arapiraca, AL",
     "website": "http://www.ufal.edu.br/arapiraca",
     "mapa": true,
+    "links": {
+        "Concursos e Editais": "http://www.ufal.edu.br/utilidades/concursos-e-editais",
+        "COPEVE": "http://copeve.ufal.br",
+        "MOODLE": "http://ava.ead.ufal.br",
+        "PIBIC": "https://sistemas.ufal.br/pibic/",
+        "SIE WEB": "https://sistemas.ufal.br/academico/home.seam",
+        "Sistema UFAL": "https://sistemas.ufal.br/perfil/"
+    },
     "telefones": {
         "Administrativo e apoio": {
             "Biblioteca": ["(82) 3482-1837", "(82) 3482-1835"],

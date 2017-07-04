@@ -11,6 +11,7 @@ import { TelefonesPage } from '../pages/telefones/telefones';
 import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from "../pages/mapa/mapa";
 import { ArquivosPage } from "../pages/arquivos/arquivos";
+import { LinksPage } from "../pages/links/links";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +26,7 @@ import { KeysPipe } from '../pipes/keys/keys';
     HorariosPage,
     MapaPage,
     ArquivosPage,
+    LinksPage,
     KeysPipe
   ],
   imports: [
@@ -40,6 +42,7 @@ import { KeysPipe } from '../pipes/keys/keys';
     TelefonesPage,
     HorariosPage,
     ArquivosPage,
+    LinksPage,
     MapaPage,
   ],
   providers: [

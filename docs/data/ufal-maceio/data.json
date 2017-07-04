@@ -4,6 +4,14 @@
     "endereco": "Av. Lourival Melo Mota, Tabuleiro dos Martins. CEP:57072-900. Maceió, AL",
     "website": "http://www.ufal.edu.br",
     "mapa": false,
+    "links": {
+        "Concursos e Editais": "http://www.ufal.edu.br/utilidades/concursos-e-editais",
+        "COPEVE": "http://copeve.ufal.br",
+        "MOODLE": "http://ava.ead.ufal.br",
+        "PIBIC": "https://sistemas.ufal.br/pibic/",
+        "SIE WEB": "https://sistemas.ufal.br/academico/home.seam",
+        "Sistema UFAL": "https://sistemas.ufal.br/perfil/"
+    },
     "telefones": {
         "Gabinete e Pró-reitorias": {
             "Gabinete do Reitor": ["(82) 3214-1004"],
