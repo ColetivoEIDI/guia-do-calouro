@@ -34,7 +34,7 @@ export class ArquivosPage {
   }
 
   url(url: string) {
-    window.open(this.dadosProvider.api + this.dadosProvider.url(this.instituicao) + "/arquivos/" + url, "_system", "location=no");
+    window.open(this.dadosProvider.api + this.dadosProvider.slug(this.instituicao) + "/arquivos/" + url, "_system", "location=no");
   }
 
 }

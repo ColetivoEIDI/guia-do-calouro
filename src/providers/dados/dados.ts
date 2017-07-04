@@ -25,7 +25,7 @@ export class DadosProvider {
   }
 
   getDados(instituicao) {
-    instituicao = this.url(instituicao);
+    instituicao = this.slug(instituicao);
     return this.http.get(this.api + instituicao + '/data.json').map(res => res.json());
   }
 
@@ -72,7 +72,7 @@ export class DadosProvider {
     });
   }
 
-  url(str) {
+  slug(str) {
 
     // TODO: finalizar a lista completa de caracteres especiais do replace
     var find =    [' ', "ó"];

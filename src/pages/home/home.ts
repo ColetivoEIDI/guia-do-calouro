@@ -10,11 +10,11 @@ import { ArquivosPage } from '../arquivos/arquivos';
 import { LinksPage } from '../links/links';
 
 @Component({
-  selector: 'page-inicio',
-  templateUrl: 'inicio.html'
+  selector: 'page-home',
+  templateUrl: 'home.html'
 })
 
-export class InicioPage {
+export class HomePage {
 
   // páginas
   telefonesPage = TelefonesPage;

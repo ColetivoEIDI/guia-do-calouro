@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 
 
 import { MyApp } from './app.component';
-import { InicioPage } from '../pages/inicio/inicio';
+import { HomePage } from '../pages/home/home';
 import { TelefonesPage } from '../pages/telefones/telefones';
 import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from "../pages/mapa/mapa";
@@ -21,7 +21,7 @@ import { KeysPipe } from '../pipes/keys/keys';
 @NgModule({
   declarations: [
     MyApp,
-    InicioPage,
+    HomePage,
     TelefonesPage,
     HorariosPage,
     MapaPage,
@@ -38,7 +38,7 @@ import { KeysPipe } from '../pipes/keys/keys';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    InicioPage,
+    HomePage,
     TelefonesPage,
     HorariosPage,
     ArquivosPage,
