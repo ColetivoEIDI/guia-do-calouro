@@ -7,6 +7,7 @@ import { TelefonesPage } from '../telefones/telefones';
 import { HorariosPage } from '../horarios/horarios';
 import { MapaPage } from '../mapa/mapa';
 import { ArquivosPage } from '../arquivos/arquivos';
+import { LinksPage } from '../links/links';
 
 @Component({
   selector: 'page-inicio',
@@ -20,6 +21,7 @@ export class InicioPage {
   horariosPage = HorariosPage;
   mapaPage = MapaPage;
   arquivosPage = ArquivosPage;
+  linksPage = LinksPage;
 
   atualizando: boolean = true;
 
