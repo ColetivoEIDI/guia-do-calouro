@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
-import { HttpModule } from '@angular/http';
-
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -12,9 +13,6 @@ import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from "../pages/mapa/mapa";
 import { ArquivosPage } from "../pages/arquivos/arquivos";
 import { LinksPage } from "../pages/links/links";
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 import { DadosProvider } from '../providers/dados/dados';
 import { KeysPipe } from '../pipes/keys/keys';
 
