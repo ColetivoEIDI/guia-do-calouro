@@ -32,10 +32,10 @@
                     <ion-row>
                         <ion-col col-12>{{dados.unidade}}</ion-col>
                     </ion-row>
-                    <ion-row *ngIf="dados.endereco_url">
+                    <ion-row *ngIf="!dados.endereco_url">
                         <ion-col col-12>{{dados.endereco}}</ion-col>
                     </ion-row>
-                    <ion-row *ngIf="!dados.endereco_url">
+                    <ion-row *ngIf="dados.endereco_url">
                         <ion-col col-12 (click)="url(dados.endereco_url)">
                             <ion-icon color="primary" name="ios-link"></ion-icon>&nbsp;&nbsp;{{dados.endereco}}
                         </ion-col>
