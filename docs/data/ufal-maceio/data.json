@@ -2,6 +2,7 @@
     "nome": "Universidade Federal de Alagoas",
     "unidade": "Campus A.C. Simões",
     "endereco": "Av. Lourival Melo Mota, Tabuleiro dos Martins. CEP:57072-900. Maceió, AL",
+    "endereco_url": false,
     "website": "http://www.ufal.edu.br",
     "mapa": false,
     "links": {
