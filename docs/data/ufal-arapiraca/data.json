@@ -6,11 +6,14 @@
     "website": "http://www.ufal.edu.br/arapiraca",
     "mapa": true,
     "links": {
+        "Biblioteca - Perfil Facebook": "https://www.facebook.com/bca.bibliotecacampusdearapiraca",
         "Concursos e Editais": "http://www.ufal.edu.br/utilidades/concursos-e-editais",
         "COPEVE": "http://copeve.ufal.br",
         "MOODLE": "http://ava.ead.ufal.br",
         "PIBIC": "https://sistemas.ufal.br/pibic/",
+        "SiBi": "http://www.sibi.ufal.br",
         "SIE WEB": "https://sistemas.ufal.br/academico/home.seam",
+        "SIGAA": "http://sigaa.sig.ufal.br/",
         "Sistema UFAL": "https://sistemas.ufal.br/perfil/"
     },
     "telefones": {
