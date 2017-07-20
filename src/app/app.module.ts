@@ -29,7 +29,7 @@ import { KeysPipe } from '../pipes/keys/keys';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, { mode: 'md' }),
     IonicStorageModule.forRoot(),
     HttpModule
   ],
