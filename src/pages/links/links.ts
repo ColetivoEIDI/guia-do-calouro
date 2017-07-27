@@ -5,7 +5,6 @@ import 'leaflet';
 import { DadosProvider } from '../../providers/dados/dados';
 
 @Component({
-  selector: 'page-links',
   templateUrl: 'links.html'
 })
 

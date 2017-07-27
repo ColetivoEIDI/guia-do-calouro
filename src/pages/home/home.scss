@@ -1,6 +1,18 @@
 page-home {
+    .toolbar {
+        .toolbar-background {
+            background-image: url(../assets/images/background_01.png);
+            background-size: 350px;
+        }
+        .toolbar-title {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0px 0px 5px #000, 0px 0px 1px #000;
+        }
+    }
     .item {
-        padding-left: 0;
         background: #f0f0f0;
         &.item-block {
             .item-inner {
@@ -21,26 +33,23 @@ page-home {
     }
     ion-card.card {
         border-radius: 0;
-    }
-    .button-inner {
-        justify-content: flex-start;
-    }
-    .button-block {
-        margin: 0;
-    }
-    .toolbar-background {
-        background-image: url(../assets/images/background_01.png);
-        background-size: 350px;
-    }
-    .toolbar-title {
-        text-align: center;
-        font-size: 1.7rem;
-        font-weight: 600;
-        color: #fff;
-        text-shadow: 0px 0px 5px #000, 0px 0px 1px #000;
-    }
-    .button-icon {
-        width: 15px;
+        .button {
+            border-radius: 0;
+            box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+            font-size: 1.6rem;
+            height: 2.8em;
+            padding: 0 1em;
+            margin: 0;
+            .button-inner {
+                font-size: 1.6rem;
+                font-weight: normal;
+                text-transform: none;
+                justify-content: flex-start;
+                .button-icon {
+                    width: 15px;
+                }
+            }
+        }
     }
     .rodape {
         padding: 10px 0;

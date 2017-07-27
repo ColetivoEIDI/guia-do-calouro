@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  * See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
  * Angular Pipes.
  */
+
 @Pipe({
   name: 'keys',
 })

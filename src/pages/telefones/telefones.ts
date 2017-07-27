@@ -3,9 +3,9 @@ import { Storage } from '@ionic/storage';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-telefones',
   templateUrl: 'telefones.html'
 })
+
 export class TelefonesPage {
   dados: any = [];
   selecionado: any;

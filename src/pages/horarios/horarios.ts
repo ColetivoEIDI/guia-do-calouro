@@ -3,9 +3,9 @@ import { Storage } from '@ionic/storage';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-horarios',
   templateUrl: 'horarios.html'
 })
+
 export class HorariosPage {
   dados: any = [];
   selecionado: any;
