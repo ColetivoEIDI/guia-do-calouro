@@ -6,6 +6,10 @@ import { IonicStorageModule } from '@ionic/storage';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { DadosProvider } from '../providers/dados/dados';
+import { KeysPipe } from '../pipes/keys/keys';
+
+// paginas
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TelefonesPage } from '../pages/telefones/telefones';
@@ -13,8 +17,6 @@ import { HorariosPage } from '../pages/horarios/horarios';
 import { MapaPage } from "../pages/mapa/mapa";
 import { ArquivosPage } from "../pages/arquivos/arquivos";
 import { LinksPage } from "../pages/links/links";
-import { DadosProvider } from '../providers/dados/dados';
-import { KeysPipe } from '../pipes/keys/keys';
 
 @NgModule({
   declarations: [

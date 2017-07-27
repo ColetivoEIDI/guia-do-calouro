@@ -19,6 +19,9 @@ page-home {
             color: #444;
         }
     }
+    ion-card.card {
+        border-radius: 0;
+    }
     .button-inner {
         justify-content: flex-start;
     }
