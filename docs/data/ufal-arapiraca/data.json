@@ -51,11 +51,11 @@
     },
     "horarios": {
         "Biblioteca": {
-            "Segunda-feira": ["07:00 as 21:40"],
-            "Terça-feira": ["07:00 as 21:40"],
-            "Quarta-feira": ["07:00 as 21:40"],
-            "Quinta-feira": ["07:00 as 21:40"],
-            "Sexta-feira": ["07:00 as 21:40"],
+            "Segunda-feira": ["07:30 as 21:40"],
+            "Terça-feira": ["07:30 as 21:40"],
+            "Quarta-feira": ["07:30 as 21:40"],
+            "Quinta-feira": ["07:30 as 21:40"],
+            "Sexta-feira": ["07:30 as 21:40"],
             "Sábado": ["08:00 as 14:00"]
         }
     },
