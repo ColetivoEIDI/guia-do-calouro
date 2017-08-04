@@ -51,12 +51,17 @@
     },
     "horarios": {
         "Biblioteca": {
-            "Segunda-feira": ["07:30 as 21:40"],
-            "Terça-feira": ["07:30 as 21:40"],
-            "Quarta-feira": ["07:30 as 21:40"],
-            "Quinta-feira": ["07:30 as 21:40"],
-            "Sexta-feira": ["07:30 as 21:40"],
-            "Sábado": ["08:00 as 14:00"]
+            "Segunda-feira": ["Das 07h30 às 21h40"],
+            "Terça-feira": ["Das 07h30 às 21h40"],
+            "Quarta-feira": ["Das 07h30 às 21h40"],
+            "Quinta-feira": ["Das 07h30 às 21h40"],
+            "Sexta-feira": ["Das 07h30 às 21h40"],
+            "Sábado": ["Das 08h às 14h"]
+        },
+        "Coordenação - Computação": {
+            "Terça-feira": ["Das 08h às 12h"],
+            "Quarta-feira": ["Das 15h20 às 17h"],
+            "Quinta-feira": ["Das 13h30 às 17h"]
         }
     },
     "arquivos": {
